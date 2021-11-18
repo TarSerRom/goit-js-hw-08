@@ -26,7 +26,6 @@ function createGalleryItems(items) {
 function onItemClick(e) {
     e.preventDefault();
 
-    console.log(e.target);
 }
 
 let gallery = new SimpleLightbox('.gallery a', { captions: true, captionsData: 'alt', captionDelay: 250 });
