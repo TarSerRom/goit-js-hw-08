@@ -9,7 +9,10 @@ const form = document.querySelector('.feedback-form');
 const emailEl = document.querySelector('input');
 const textArealEl = document.querySelector('textarea');
 
-let formData = {};
+let formData = {
+    email: '',
+    message: ''
+};
 
 
 form.addEventListener('submit', onFormSubmit);
@@ -46,7 +49,6 @@ function populateMessageOutput() {
         formData = parsedMessage;
         emailEl.value = parsedMessage.email;
         textArealEl.value = parsedMessage.message;
-
-
+    
     }
 }
