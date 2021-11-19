@@ -5,7 +5,7 @@ import Player from '@vimeo/player';
     const player = new Vimeo.Player(iframe);
 
     
-player.on('timeupdate', getCurrentTime);
+player.on('timeupdate', throttle(getCurrentTime, 500));
  function getCurrentTime (data) {
 localStorage.setItem('videoplayer-current-time', data.seconds);
 };
