@@ -9,10 +9,7 @@ const form = document.querySelector('.feedback-form');
 const emailEl = document.querySelector('input');
 const textArealEl = document.querySelector('textarea');
 
-let formData = {
-    email: '',
-    message: ''
-};
+let formData = {};
 
 
 form.addEventListener('submit', onFormSubmit);
@@ -47,8 +44,8 @@ function populateMessageOutput() {
     if (savedMessage) {
         const parsedMessage = JSON.parse(savedMessage);
         formData = parsedMessage;
-        emailEl.value = parsedMessage.email;
-        textArealEl.value = parsedMessage.message;
+        emailEl.value = parsedMessage.email || "";
+        textArealEl.value =  parsedMessage.message || "";
     
     }
 }
